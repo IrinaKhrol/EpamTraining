@@ -1,5 +1,11 @@
-﻿namespace OOP
+﻿using System.Xml.Serialization;
+
+namespace OOP
 {
+    [XmlInclude(typeof(Car))]
+    [XmlInclude(typeof(Bus))]
+    [XmlInclude(typeof(Scooter))]
+    [XmlInclude(typeof(Truck))]
     public abstract class Vehicle
 
     {
@@ -8,6 +14,10 @@
         public Chassis Chassis { get; set; }
 
         public Transmission Transmission { get; set; }
+
+        protected Vehicle()
+        {
+        }
 
         public Vehicle (Engine engine, Chassis chassis, Transmission transmission)
         {

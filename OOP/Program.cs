@@ -1,13 +1,13 @@
 ﻿namespace OOP
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+          static void Main(string[] args)
         {
 
             Car bently = new Car("sport",
-                         new Engine(500, 6.0, "Gasoline AI-95", "JM3LW28A520306187"), 
-                         new Chassis(4, "NB989", 20), 
+                         new Engine(500, 6.0, "Gasoline AI-95", "JM3LW28A520306187"),
+                         new Chassis(4, "NB989", 20),
                          new Transmission("automatic", 8, "Bentley Motors Ltd."));
 
             Bus bus = new Bus(25,
@@ -27,10 +27,22 @@
 
             List<Vehicle> vehicles = new List<Vehicle>() { bently, bus, truck, scooter };
 
-            foreach (var vehicle in vehicles) 
-            {
-                Console.WriteLine(vehicle.GetAllInformation() + "\n");
-            }
+
+            List<Vehicle> vehiclesWithEngine = vehicles.Where(x => x.Engine.Volume > 1.5).ToList();
+
+            List<Vehicle> listOfBusesAndTrucks = vehicles.OfType<Bus>().Union<Vehicle>(vehicles.OfType<Truck>()).ToList();
+
+            var vehiclesWithTypeEngineAndChassis = listOfBusesAndTrucks.Select(x=> x.Engine).ToList();
+
+            var vehiclesWithTransmission = vehicles.GroupBy(x => x.Transmission.TransmissionType).ToList();
+
+
+
+            Serializer.SerializeXML(vehiclesWithEngine, "EngineVolume.XML");
+
+            Serializer.SerializeXML(vehiclesWithTransmission, "Transmission");
+
+            Serializer.SerializeXML(vehiclesWithTypeEngineAndChassis, "EngineNumberPowerAllBusesAndTrucks");
         }
     }
 }

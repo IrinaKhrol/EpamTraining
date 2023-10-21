@@ -1,8 +1,14 @@
 ﻿namespace OOP
 {
+    [Serializable]
     public class Truck : Vehicle
     {
         public string СabinType { get; set; }
+
+        public Truck()
+        {
+        }
+
         public Truck(string сabinType, Engine Engine, Chassis Chassis, Transmission Transmission) : base(Engine, Chassis, Transmission)
         {
             СabinType = сabinType;

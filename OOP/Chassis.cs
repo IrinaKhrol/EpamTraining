@@ -1,5 +1,6 @@
 ﻿namespace OOP
 {
+    [Serializable]
     public class Chassis
     {
         public int NumberOfWheels { get; set; }
@@ -7,6 +8,10 @@
         public string ChassisNumber { get; set; }
 
         public int LoadCapacity { get; set; }
+
+        public Chassis()
+        {
+        }
 
         public Chassis(int numberOfWheels, string chassisNumber, int loadCapacity)
         {
