@@ -11,7 +11,6 @@
 
         public Transmission()
         {
-
         }
 
         public Transmission(string transmissionType, int numberOfGears, string manufacturer)

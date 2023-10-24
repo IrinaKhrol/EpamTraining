@@ -38,11 +38,11 @@
 
 
 
-            Serializer.SerializeXML(vehiclesWithEngine, "EngineVolume.XML");
+            Serializer.SerializeXML(vehiclesWithEngine, "ListOfAllVehiclesWithAnEngineCapacityGreaterThan1.5Liters.XML");
 
-            Serializer.SerializeXML(vehiclesWithTransmission, "Transmission");
+            Serializer.SerializeXML(vehiclesWithTransmission, "ListOfAllVehiclesGroupedByTransmissionType.XML");
 
-            Serializer.SerializeXML(vehiclesWithTypeEngineAndChassis, "EngineNumberPowerAllBusesAndTrucks");
+            Serializer.SerializeXML(vehiclesWithTypeEngineAndChassis, "ListOfEngineTypeSerialNumberAndPowerForAllBusesAndTrucks.XML");
         }
     }
 }
