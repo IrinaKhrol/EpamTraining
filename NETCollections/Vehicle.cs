@@ -7,7 +7,6 @@ namespace NETCollections
     [XmlInclude(typeof(Scooter))]
     [XmlInclude(typeof(Truck))]
     public abstract class Vehicle
-
     {
         public Engine Engine { get; set; }
 

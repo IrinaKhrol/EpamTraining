@@ -1,9 +1,9 @@
 ﻿namespace InterfacesAndAbstractClasses
 {
-    internal class Bird : FlyingObject, IFlyable
+    public class Bird : FlyingObject, IFlyable
     {
-        const int minSpeedKm = 1;
-        const int maxSpeedKm = 20;
+        private const int MinSpeedKm = 1;
+        private const int MaxSpeedKm = 20;
 
         public Bird(Coordinate currentCoordinate)
         {
@@ -19,7 +19,7 @@
         private int GetSpeed()
         {
             Random rnd = new Random();
-            return rnd.Next(minSpeedKm, maxSpeedKm);
+            return rnd.Next(MinSpeedKm, MaxSpeedKm);
         }
 
         public void FlyTo(Coordinate newCoordinate)

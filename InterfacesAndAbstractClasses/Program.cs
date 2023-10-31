@@ -1,6 +1,6 @@
 ﻿namespace InterfacesAndAbstractClasses
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -41,7 +41,6 @@
             drone.PrintDistance(newCoordinateDrone);
             drone.FlyTo(newCoordinateDrone);
             drone.PrintDistance(newCoordinateDrone);
-
         }
     }
 }
