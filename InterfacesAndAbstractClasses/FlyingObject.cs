@@ -1,6 +1,6 @@
 ﻿namespace InterfacesAndAbstractClasses
 {
-    abstract class FlyingObject
+    public abstract class FlyingObject
     {
         protected Coordinate currentCoordinate;
         protected int speed;

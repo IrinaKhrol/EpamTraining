@@ -1,13 +1,13 @@
 ﻿namespace InterfacesAndAbstractClasses
 {
-    internal class Drone : FlyingObject, IFlyable
+    public class Drone : FlyingObject, IFlyable
     {
 
-        const int MinSpeedKm = 50;
-        const int MaxSpeedKm = 300;
-        const double FreezeTime = 0.0166666; // 1min = 1/60h = 0.0166666h (time the drone hangs in the air)
-        const double IntervalTimeBeforeFreeze = 0.166666; // 10 min = 1/6h = 0.166666h(time interval after which the drone hovers in the air again)
-        const int MaxDistance = 500;// maximum possible flight distance of the drone
+        private const int MinSpeedKm = 50;
+        private const int MaxSpeedKm = 300;
+        private const double FreezeTime = 0.0166666; // 1min = 1/60h = 0.0166666h (time the drone hangs in the air)
+        private const double IntervalTimeBeforeFreeze = 0.166666; // 10 min = 1/6h = 0.166666h(time interval after which the drone hovers in the air again)
+        private const int MaxDistance = 500;// maximum possible flight distance of the drone
 
         public Drone(Coordinate currentCoordinate)
         {
@@ -51,7 +51,7 @@
 
         public bool ValidateMaxDistance(Coordinate newCoordinate)
         {
-            return (GetDistance(newCoordinate) >= MaxDistance) ? false : true;
+            return(GetDistance(newCoordinate) >= MaxDistance) ? false : true;
         }
     }
 }

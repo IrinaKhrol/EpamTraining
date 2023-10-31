@@ -36,7 +36,7 @@ namespace NETCollections
             }
         }
 
-        internal static void SerializeXML(List<Engine> vehiclesWithTypeEngineAndChassis, string nameOfFile)
+        public static void SerializeXML(List<Engine> vehiclesWithTypeEngineAndChassis, string nameOfFile)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(Engine));
 
